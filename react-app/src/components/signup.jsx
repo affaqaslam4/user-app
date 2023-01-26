@@ -43,7 +43,7 @@ export const Signup = () => {
       password,
     };
     axios
-      .post("http://localhost:5000/api/signup", body)
+      .post("https://simple-user-app-affaq.herokuapp.com/api/signup", body)
       .then((res) => {
         const {
           data: { success, user, error },

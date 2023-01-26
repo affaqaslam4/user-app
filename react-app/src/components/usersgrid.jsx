@@ -23,7 +23,7 @@ const columns = [
 
 const updateUserPermission = (event, data) => {
   axios
-    .post("http://localhost:5000/api/setUserPermissions", {
+    .post("https://simple-user-app-affaq.herokuapp.com/api/setUserPermissions", {
       id: data._id,
       isAdmin: event.target.checked,
     })
@@ -36,7 +36,7 @@ export const UsersGrid = () => {
 
   const getUsers = () => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get("https://simple-user-app-affaq.herokuapp.com/api/users")
       .then((res) => {
         setUsers(res.data);
       })

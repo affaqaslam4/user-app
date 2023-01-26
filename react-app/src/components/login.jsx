@@ -40,7 +40,7 @@ export const Login = () => {
       password,
     };
     axios
-      .post("http://localhost:5000/api/login", body)
+      .post("https://simple-user-app-affaq.herokuapp.com/api/login", body)
       .then((res) => {
         console.log(res);
         const {
