@@ -22,6 +22,7 @@ router.post("/login", (req, res, next) => {
 });
 router.post("/signup", (req, res, next) => {
   if (req.body.email && req.body.name && req.body.password) {
+    req.body.isAdmin = true;
     let query = { email: req.body.email };
     let update = {
       $setOnInsert: {
